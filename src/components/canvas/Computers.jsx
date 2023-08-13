@@ -15,9 +15,9 @@ const Computers = () => {
       castShadow
       shadow-mapSize={1024}/>
       <primitive object={computer.scene}
-      scale={0.75}
-      position={[0, -3.25, -1.5]}
-      rotation={[-0.01, -0.2, -0.1]}/>
+      scale={0.45}
+      position={[0, -2.5, -.2]}
+      rotation={[.62, 1.14, -.5]}/>
     </mesh>
   )
 }
@@ -27,7 +27,7 @@ const ComputersCanvas = () => {
     <Canvas 
     frameloop='demand'
     shadows
-    camera={{position:[20,3,5], fov:25}}
+    camera={{position:[26,3,5], fov:30}}
     gl={{preserveDrawingBuffer:true}}>
       <Suspense fallback={<CanvasLoader/>}>
         <OrbitControls
