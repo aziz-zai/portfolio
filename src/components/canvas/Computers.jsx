@@ -1,29 +1,35 @@
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-import { Suspense, useEffect, useState } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import CanvasLoader from '../Loader';
-const Computers = ({ isMobile }) => {
+const Computers = ({ isMobile, rotationSpeed }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
+  const groupRef = useRef(); // Ref for the mesh group
+
+  useFrame(() => {
+    // Rotate the group around the Y-axis
+    groupRef.current.rotation.y += 0.003; //  adjust the rotation speed here
+  });
   return (
-    <mesh>
-      <hemisphereLight intensity={0.15} groundColor="black"/>
+    <group  ref={groupRef}>
+      <hemisphereLight intensity={1} groundColor="black"/>
       <pointLight intensity={1}/>
       <spotLight postition={[-20, 50,10]}
       angle={0.12}
       penumbra={1}
       intensity={1}
-      castShadow
-      shadow-mapSize={1024}/>
+      />
       <primitive object={computer.scene}
-      scale={isMobile ? 0.22 : 0.375}
-      position={isMobile ? [0, -.22, -.75] : [0, -2.5, -.2]}
-      rotation={isMobile ? [.3, .37, -.4]:[1.5, 1.25, -1.4]}/>
-    </mesh>
+      scale={isMobile ? .7 : 1.25}
+      position={isMobile ? [-1, -3, 1.5] : [1, -4, 1]}
+      rotation={isMobile ? [.01, -0.1 , -.2]:[.01, -0.1 , -.2]}/>
+    </group>
   )
 }
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false)
+  const [rotationSpeed, setRotationSpeed] = useState(0.005);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -45,12 +51,19 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+  const handleMouseEnter = () => {
+    setRotationSpeed(0); // Stop rotation when mouse enters
+  };
+
+  const handleMouseLeave = () => {
+    setRotationSpeed(0.005); // Restart rotation when mouse leaves
+  };
 
   return(
     <Canvas 
-    frameloop='demand'
+    frameloop='always'
     shadows
-    camera={{position:[26,3,5], fov:30}}
+    camera={{position:[30,6,5], fov:30}}
     gl={{preserveDrawingBuffer:true}}>
       <Suspense fallback={<CanvasLoader/>}>
         <OrbitControls
@@ -58,7 +71,7 @@ const ComputersCanvas = () => {
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}
         />
-        <Computers isMobile={isMobile}/>
+        <Computers isMobile={isMobile} rotationSpeed={rotationSpeed}/>
       </Suspense>
       <Preload all/>
     </Canvas>

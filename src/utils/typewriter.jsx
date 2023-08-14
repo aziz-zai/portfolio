@@ -54,7 +54,7 @@ export default function TypeWriter({appendClass, hats}) {
       <div className="flex justify-start gap-2 mr-auto">
         <div className={`${typeWriterClass}${collapseClass}`}>
           {hats[currentHat].suffix.map(item =>
-            <span style={{color:item.color}}>
+            <span key={item.text} style={{color:item.color}}>
               {item.text}
             </span>
               )}
