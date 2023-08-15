@@ -23,7 +23,7 @@ import typescript from "./tech/typescript.png";
 
 import hdm_logo from "./company/hdm_logo.png";
 import mercedes_logo from "./company/mercedes_logo.png";
-import tutor_logo from "./company/tutor_logo.jpg";
+import tutor_logo from "./company/tutor_logo.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
