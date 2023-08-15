@@ -21,10 +21,9 @@ import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import typescript from "./tech/typescript.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import hdm_logo from "./company/hdm_logo.png";
+import mercedes_logo from "./company/mercedes_logo.png";
+import tutor_logo from "./company/tutor_logo.jpg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -40,23 +39,22 @@ export {
   figma,
   git,
   github,
+  hdm_logo,
   html,
   javascript,
   jobit,
   logo,
   menu,
-  meta,
+  mercedes_logo,
   mobile,
   mongodb,
   nodejs,
   reactjs,
   redux,
-  shopify,
-  starbucks,
   tailwind,
-  tesla,
   threejs,
   tripguide,
+  tutor_logo,
   typescript,
   web,
 };
