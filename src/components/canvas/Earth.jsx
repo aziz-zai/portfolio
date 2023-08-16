@@ -9,15 +9,10 @@ const Earth = () => {
 
   return (
     <mesh>
-      <hemisphereLight intensity={1} groundColor='black' />
+      <hemisphereLight intensity={50} groundColor='black' />
       <pointLight intensity={1} />
-      <spotLight position={[-40, 10, 10]} angle={0.12} penumbra={1} intensity={0.5} />
-      <primitive
-        object={earth.scene}
-        scale={1}
-        position={[1, -0.5, 1]}
-        rotation={[0.015, -0.1, -0.015]}
-      />
+      <spotLight position={[-10, 10, 20]} angle={0.12} penumbra={1} intensity={1} />
+      <primitive object={earth.scene} scale={3} position-y={0} rotation-0={0} />
     </mesh>
   );
 };
@@ -27,11 +22,11 @@ const EarthCanvas = () => {
     <Canvas
       shadows
       frameloop='demand'
-      dpr={[1, 1]}
+      dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}
       camera={{
         fov: 45,
-        near: 0.3,
+        near: 0.1,
         far: 200,
         position: [-4, 3, 6],
       }}
