@@ -1,14 +1,14 @@
 import {
+  affstaetter,
   backend,
-  carrent,
   creator,
   css,
+  elektro,
   flask,
   github,
   hdm_logo,
   html,
   javascript,
-  jobit,
   mercedes_logo,
   mobile,
   mssql,
@@ -18,7 +18,7 @@ import {
   reactjs,
   tailwind,
   threejs,
-  tripguide,
+  thrones,
   tutor_logo,
   typescript,
   web,
@@ -185,30 +185,26 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+    name: "Affstaetter Wohnbau GmbH",
+    description: "A Web Application that represents Affstaetter Wohnbau GmbH",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
+        name: "scss",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: affstaetter,
+    source_code_link: "https://github.com/aziz-zai/Affst-tterWohnbauGmbH",
+    demo_link: "https://affstaetterwohnbau.com/",
   },
   {
-    name: "Job IT",
+    name: "Throne Houses",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "A Web Application that shows all the Houses of Game of Thrones from the gameofthrones API.",
     tags: [
       {
         name: "react",
@@ -218,34 +214,23 @@ const projects = [
         name: "restapi",
         color: "green-text-gradient",
       },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: thrones,
+    source_code_link: "https://github.com/aziz-zai/ThroneHouses",
+    demo_link: "https://house-of-thrones.netlify.app/",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    name: "Elektro Yer",
+    description: "A Web Application that represents Affstaetter Wohnbau GmbH.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: elektro,
+    source_code_link: "https://github.com/aziz-zai/elektro-yer",
+    demo_link: "https://elektro-yer.de/",
   },
 ];
 

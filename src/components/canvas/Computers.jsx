@@ -4,14 +4,12 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import CanvasLoader from "../Loader";
 const Computers = ({ isMobile, rotationSpeed }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
-  const groupRef = useRef(); // Ref for the mesh group
 
   useFrame(() => {
     // Rotate the group around the Y-axis
-    groupRef.current.rotation.y += 0.003; //  adjust the rotation speed here
   });
   return (
-    <group ref={groupRef}>
+    <mesh>
       <hemisphereLight intensity={1} groundColor='black' />
       <pointLight intensity={1} />
       <spotLight position={[-40, 10, 10]} angle={0.12} penumbra={1} intensity={0.5} />
@@ -21,7 +19,7 @@ const Computers = ({ isMobile, rotationSpeed }) => {
         position={isMobile ? [-1, -3, 1.5] : [1, -4, 1]}
         rotation={isMobile ? [0.01, -0.1, -0.01] : [0.015, -0.1, -0.015]}
       />
-    </group>
+    </mesh>
   );
 };
 
@@ -66,6 +64,7 @@ const ComputersCanvas = () => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
+          autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}

@@ -1,6 +1,8 @@
 import backend from "./backend.png";
 import close from "./close.svg";
 import creator from "./creator.png";
+import githubWhite from "./github.png";
+import link from "./link.png";
 import logo from "./logo.png";
 import menu from "./menu.svg";
 import mobile from "./mobile.png";
@@ -25,23 +27,25 @@ import hdm_logo from "./company/hdm_logo.png";
 import mercedes_logo from "./company/mercedes_logo.png";
 import tutor_logo from "./company/tutor_logo.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import affstaetter from "./affstaetter.jpg";
+import elektro from "./elektro.jpg";
+import thrones from "./thrones.jpg";
 
 export {
+  affstaetter,
   backend,
-  carrent,
   close,
   creator,
   css,
   docker,
+  elektro,
   flask,
   github,
+  githubWhite,
   hdm_logo,
   html,
   javascript,
-  jobit,
+  link,
   logo,
   menu,
   mercedes_logo,
@@ -53,7 +57,7 @@ export {
   reactjs,
   tailwind,
   threejs,
-  tripguide,
+  thrones,
   tutor_logo,
   typescript,
   web,

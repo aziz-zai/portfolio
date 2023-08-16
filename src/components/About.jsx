@@ -41,9 +41,8 @@ const About = () => {
         I am a recent graduate with a Bachelor's degree in Business Informatics and a
         strong passion for Software Development. I possess experience and expertise in
         both Frontend and Backend technologies, including database technologies. I am a
-        quick learner and thrive in collaborative team environments. Moreover, I have a
-        deep enthusiasm for teaching. I provide tutoring in subjects such as Mathematics
-        and Web Development.
+        quick learner and thrive in collaborative team environments. Also I provide
+        tutoring in subjects such as Mathematics and Web Development.
       </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
