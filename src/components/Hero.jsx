@@ -9,13 +9,13 @@ const Hero = () => {
     {
       suffix: [
         { text: "Aziz ", color: "white" },
-        { text: "Zai", color: "#596EF4" },
+        { text: "Zai", color: "#253CA2" },
       ],
     },
     {
       suffix: [
         { text: "a Web ", color: "white" },
-        { text: "Developer", color: "#596EF4" },
+        { text: "Developer", color: "#253CA2" },
       ],
     },
   ];
@@ -26,7 +26,7 @@ const Hero = () => {
       absolute inset-0 top-[120px] max-w-7xl flex mx-auto flex-row items-start gap-5`}
       >
         <div className='flex flex-col justify-center items-center mt-5'>
-          <div className='w-5 h-5 rounded-full bg-[#596EF4]' />
+          <div className='w-5 h-5 rounded-full bg-[#253CA2]' />
           <div className='w-1 sm:h-80 h-40 blue-gradient' />
         </div>
         <div className=''>

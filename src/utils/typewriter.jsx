@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-
-export default function TypeWriter({appendClass, hats}) {
+export default function TypeWriter({ appendClass, hats }) {
   // Outer container base class + append custom class
   let className = "flex flex-col gap-4";
   if (appendClass) className += " " + appendClass;
   // Typewriter effect base class
   const typeWriterClass =
-    "font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] border-b-4 border-b-[#596EF4] border-r-2 " +
+    "font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] border-b-4 border-b-[#253CA2] border-r-2 " +
     "animate-cursor overflow-hidden whitespace-nowrap transition-[width] ease-in-out duration-1000 mr-auto";
 
   // State of current hat index
@@ -51,13 +50,13 @@ export default function TypeWriter({appendClass, hats}) {
 
   return (
     <div className={className}>
-      <div className="flex justify-start gap-2 mr-auto">
+      <div className='flex justify-start gap-2 mr-auto'>
         <div className={`${typeWriterClass}${collapseClass}`}>
-          {hats[currentHat].suffix.map(item =>
-            <span key={item.text} style={{color:item.color}}>
+          {hats[currentHat].suffix.map((item) => (
+            <span key={item.text} style={{ color: item.color }}>
               {item.text}
             </span>
-              )}
+          ))}
         </div>
       </div>
     </div>
