@@ -8,12 +8,7 @@ const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
 
   return (
-    <mesh>
-      <hemisphereLight intensity={50} groundColor='black' />
-      <pointLight intensity={1} />
-      <spotLight position={[-10, 10, 20]} angle={0.12} penumbra={1} intensity={1} />
-      <primitive object={earth.scene} scale={3} position-y={0} rotation-0={0} />
-    </mesh>
+    <primitive object={earth.scene} scale={1.7} position={[0, -1.3, 0]} rotation-0={0} />
   );
 };
 
@@ -28,7 +23,7 @@ const EarthCanvas = () => {
         fov: 45,
         near: 0.1,
         far: 200,
-        position: [-4, 3, 6],
+        position: [-2, 3, 6],
       }}
     >
       <Suspense fallback={<CanvasLoader />}>

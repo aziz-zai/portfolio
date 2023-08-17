@@ -6,7 +6,7 @@ import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 import { EarthCanvas } from "./canvas";
-
+//template_7n8wa3p service_whtquzi -7_XcIjuL_PwX7u4R
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -16,8 +16,44 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setForm({ ...form, [name]: value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs
+      .send(
+        "service_whtquzi",
+        "template_7n8wa3p",
+        {
+          from_name: form.name,
+          to_name: "Aziz",
+          from_email: form.email,
+          to_email: "azizzai1234@googlemail.com",
+          message: form.message,
+        },
+        "-7_XcIjuL_PwX7u4R"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I willl get back to you as soon as possible.");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Something went wrong.");
+        }
+      );
+  };
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
       <motion.div
@@ -68,7 +104,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl'
           >
-            {loading ? "Sending" : "Sent"}
+            {loading ? "Sending..." : "Sent"}
           </button>
         </form>
       </motion.div>

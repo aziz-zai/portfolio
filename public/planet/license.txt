@@ -1,11 +1,11 @@
 Model Information:
-* title:	Puzzle Ball
-* source:	https://sketchfab.com/3d-models/puzzle-ball-bc0a6a5e5b4d407fb11c5a6ddd06af12
-* author:	golinad (https://sketchfab.com/golinad)
+* title:	Crystal VFX UI with animation game ready
+* source:	https://sketchfab.com/3d-models/crystal-vfx-ui-with-animation-game-ready-f5c9e3eeda3f4a94b6482db43cf043d9
+* author:	Rob Li (https://sketchfab.com/LiBinZyu)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Puzzle Ball" (https://sketchfab.com/3d-models/puzzle-ball-bc0a6a5e5b4d407fb11c5a6ddd06af12) by golinad (https://sketchfab.com/golinad) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Crystal VFX UI with animation game ready" (https://sketchfab.com/3d-models/crystal-vfx-ui-with-animation-game-ready-f5c9e3eeda3f4a94b6482db43cf043d9) by Rob Li (https://sketchfab.com/LiBinZyu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
