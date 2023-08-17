@@ -202,7 +202,7 @@ const projects = [
     demo_link: "https://affstaetterwohnbau.com/",
   },
   {
-    name: "Throne Houses",
+    name: "House Of Thrones",
     description:
       "A Web Application that shows all the Houses of Game of Thrones from the gameofthrones API.",
     tags: [

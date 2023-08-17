@@ -23,6 +23,9 @@ import tailwind from "./tech/tailwind.png";
 import threejs from "./tech/threejs.svg";
 import typescript from "./tech/typescript.png";
 
+import email from "./email.png";
+import phone from "./phone.png";
+
 import hdm_logo from "./company/hdm_logo.png";
 import mercedes_logo from "./company/mercedes_logo.png";
 import tutor_logo from "./company/tutor_logo.png";
@@ -39,6 +42,7 @@ export {
   css,
   docker,
   elektro,
+  email,
   flask,
   github,
   githubWhite,
@@ -53,6 +57,7 @@ export {
   mssql,
   mui,
   mysql,
+  phone,
   python,
   reactjs,
   tailwind,
