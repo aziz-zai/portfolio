@@ -6,7 +6,7 @@ export default function TypeWriter({ appendClass, hats }) {
   if (appendClass) className += " " + appendClass;
   // Typewriter effect base class
   const typeWriterClass =
-    "font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] border-b-4 border-b-[#253CA2] border-r-2 " +
+    "font-black md:text-[55px] sm:text-[45px] xs:text-[35px] text-[25px] border-b-4 border-b-[#253CA2] border-r-2 " +
     "animate-cursor overflow-hidden whitespace-nowrap transition-[width] ease-in-out duration-1000 mr-auto";
 
   // State of current hat index

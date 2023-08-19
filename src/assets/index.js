@@ -32,6 +32,7 @@ import tutor_logo from "./company/tutor_logo.png";
 
 import affstaetter from "./affstaetter.jpg";
 import elektro from "./elektro.jpg";
+import hero_img from "./hero_img.svg";
 import thrones from "./thrones.jpg";
 
 export {
@@ -47,6 +48,7 @@ export {
   github,
   githubWhite,
   hdm_logo,
+  hero_img,
   html,
   javascript,
   link,
