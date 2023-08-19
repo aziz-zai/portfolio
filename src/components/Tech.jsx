@@ -8,11 +8,11 @@ const Tech = () => {
   return (
     <motion.div
       variants={slideIn("down", "twing", 0.2, 1)}
-      className='py-10 rounded-lg flex flex-row flex-wrap justify-center gap-10 shadow-xl bg-tertiary border border-black'
+      className='py-10 rounded-lg flex flex-row flex-wrap justify-center gap-10 shadow-card bg-tertiary border border-black'
     >
       {technologies.map((tech, index) => (
-        <div key={index} className='tooltip cursor-pointer '>
-          <div className=' relative w-28 h-28 rounded-full p-3 bg-secondary flex items-center justify-center shadow-xl'>
+        <div key={index} className='tooltip cursor-pointer'>
+          <div class='w-28 h-28 rounded-full flex h-full w-full items-center justify-center bg-secondary shadow-card'>
             <img
               src={tech.icon}
               alt={tech.name}
