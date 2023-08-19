@@ -2,6 +2,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
+import { contact } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
@@ -110,9 +111,9 @@ const Contact = () => {
       </motion.div>
       <motion.div
         variants={slideIn("right", "twing", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px] m-auto'
       >
-        <EarthCanvas />
+        <img src={contact} alt='contact-img' />
       </motion.div>
     </div>
   );

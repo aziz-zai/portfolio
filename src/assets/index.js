@@ -31,6 +31,7 @@ import mercedes_logo from "./company/mercedes_logo.png";
 import tutor_logo from "./company/tutor_logo.png";
 
 import affstaetter from "./affstaetter.jpg";
+import contact from "./contact.svg";
 import elektro from "./elektro.jpg";
 import hero_img from "./hero_img.svg";
 import thrones from "./thrones.jpg";
@@ -39,6 +40,7 @@ export {
   affstaetter,
   backend,
   close,
+  contact,
   creator,
   css,
   docker,
