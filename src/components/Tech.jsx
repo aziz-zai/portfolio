@@ -1,17 +1,28 @@
+import { motion } from "framer-motion";
 import { technologies } from "../constants";
 import { SectionWrapper } from "../hoc";
+import { slideIn } from "../utils/motion";
 import { BallCanvas } from "./canvas";
 
 const Tech = () => {
   return (
-    <div className='flex flex-row flex-wrap justify-center gap-10'>
+    <motion.div
+      variants={slideIn("down", "twing", 0.2, 1)}
+      className='py-10 rounded-lg flex flex-row flex-wrap justify-center gap-10 shadow-xl bg-tertiary border border-black'
+    >
       {technologies.map((tech, index) => (
-        <div className='w-28 h-28 tooltip' key={index}>
-          <BallCanvas icon={tech.icon} />
+        <div key={index} className='tooltip cursor-pointer '>
+          <div className=' relative w-28 h-28 rounded-full p-3 bg-secondary flex items-center justify-center shadow-xl'>
+            <img
+              src={tech.icon}
+              alt={tech.name}
+              className='absolute w-20 h-auto m-auto'
+            />
+          </div>
           <span className='tooltiptext'>{tech.name}</span>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

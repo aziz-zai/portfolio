@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 import {
   About,
@@ -25,7 +26,7 @@ const App = () => {
         <Works />
         <div className='relative z-0'>
           <Contact />
-          <StarsCanvas />
+          <Suspense fallback={null}></Suspense>
         </div>
         <Footer />
       </div>
