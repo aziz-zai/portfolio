@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { hero_img } from "../assets";
 import { styles } from "../styles";
 import TypeWriter from "../utils/typewriter";
-import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   const hats = [

@@ -1,15 +1,6 @@
 import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-import {
-  About,
-  Contact,
-  Experience,
-  Hero,
-  Navbar,
-  StarsCanvas,
-  Tech,
-  Works,
-} from "./components";
+import { About, Contact, Experience, Hero, Navbar, Tech, Works } from "./components";
 import { Footer } from "./components/Footer";
 
 const App = () => {

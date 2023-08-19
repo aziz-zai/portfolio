@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { technologies } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import { BallCanvas } from "./canvas";
 
 const Tech = () => {
   return (
@@ -12,7 +11,7 @@ const Tech = () => {
     >
       {technologies.map((tech, index) => (
         <div key={index} className='tooltip cursor-pointer'>
-          <div class='w-28 h-28 rounded-full flex h-full w-full items-center justify-center bg-secondary shadow-card'>
+          <div class='w-28 h-28 rounded-full flex items-center justify-center bg-secondary shadow-card'>
             <img
               src={tech.icon}
               alt={tech.name}
