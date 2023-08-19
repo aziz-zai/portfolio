@@ -11,7 +11,7 @@ const Tech = () => {
     >
       {technologies.map((tech, index) => (
         <div key={index} className='tooltip cursor-pointer'>
-          <div class='w-28 h-28 rounded-full flex items-center justify-center bg-secondary shadow-card'>
+          <div className='w-28 h-28 rounded-full flex items-center justify-center bg-secondary shadow-card'>
             <img
               src={tech.icon}
               alt={tech.name}
