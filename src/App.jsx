@@ -1,7 +1,4 @@
 import { BrowserRouter } from "react-router-dom";
-
-import { m } from "framer-motion";
-import { useState } from "react";
 import {
   About,
   Contact,

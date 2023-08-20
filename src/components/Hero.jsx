@@ -1,9 +1,41 @@
 import { motion } from "framer-motion";
-import { hero_img } from "../assets";
+import { useEffect, useState } from "react";
+import Lottie from "react-lottie";
+import * as hero_img from "../assets/hero_animation.json";
 import { styles } from "../styles";
 import TypeWriter from "../utils/typewriter";
 
+const defaultOptions1 = {
+  loop: true,
+  autoplay: true,
+  animationData: hero_img.default,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
+
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Add a listener for changes to the screen size
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+    // Set the initial value of the `isMobile` state variable
+    setIsMobile(mediaQuery.matches);
+
+    // Define a callback function to handle changes to the media query
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    };
+
+    // Add the callback function as a listener for changes to the media query
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
   const hats = [
     {
       suffix: [
@@ -39,8 +71,14 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div className={`${styles.paddingX}  w-full absolute top-[300px]`}>
-        <img src={hero_img} alt='hero img' className='w-auto h-full mx-auto' />
+      <div
+        className={`${styles.paddingX}  w-full absolute top-[300px] sm:top-[200px]  flex flex-shrink`}
+      >
+        <Lottie
+          options={defaultOptions1}
+          width={isMobile ? 300 : 650}
+          height={isMobile ? 300 : 650}
+        />
       </div>
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
