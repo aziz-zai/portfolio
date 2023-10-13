@@ -23,7 +23,6 @@
 }
 
 .tooltip .tooltiptext {
-  visibility: hidden;
   width: 120px;
   background-color: rgb(29, 24, 54);
   color: rgb(255, 255, 255);
