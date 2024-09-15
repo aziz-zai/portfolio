@@ -3,7 +3,7 @@ import {
   Preloader,
 } from "./components";
 import Portfolio from "./pages/Portfolio";
-import HigherLowerGame from "./pages/higherLowerGame";
+import HigherLowerGame from "./pages/HigherLowerGame";
 
 const App = () => {
   return (

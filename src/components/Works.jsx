@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Tilt from "react-tilt";
 import { githubWhite, link } from "../assets";
 import { projects } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -17,7 +16,7 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
+      <div
         options={{ max: 45, scale: 1, speed: 450 }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
@@ -61,7 +60,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };

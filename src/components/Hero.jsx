@@ -1,21 +1,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Lottie from "react-lottie";
-import * as hero_img from "../assets/hero_animation.json";
+import Lottie from "lottie-react";
+import heroAnimation from "../assets/hero_animation.json"; // Import animation directly
 import { styles } from "../styles";
 import TypeWriter from "../utils/typewriter";
 
-const defaultOptions1 = {
-  loop: true,
-  autoplay: true,
-  animationData: hero_img.default,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
-
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -36,6 +28,7 @@ const Hero = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+
   const hats = [
     {
       suffix: [
@@ -50,6 +43,7 @@ const Hero = () => {
       ],
     },
   ];
+
   return (
     <section className='relative w-full h-screen mx-auto'>
       <div
@@ -62,7 +56,7 @@ const Hero = () => {
         </div>
         <div className=''>
           <div className='flex'>
-            <h1 className={`${styles.sectionHeadText} text-white `}>Hi, Im&nbsp;</h1>
+            <h1 className={`${styles.sectionHeadText} text-white `}>Hi, I'm&nbsp;</h1>
             <TypeWriter hats={hats} />
           </div>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
@@ -72,12 +66,14 @@ const Hero = () => {
         </div>
       </div>
       <div
-        className={`${styles.paddingX}  w-full absolute top-[300px] sm:top-[200px]  flex flex-shrink`}
+        className={`${styles.paddingX} w-full absolute top-[300px] sm:top-[200px] flex flex-shrink justify-center`}
       >
+        {/* Updated Lottie component */}
         <Lottie
-          options={defaultOptions1}
-          width={isMobile ? 300 : 650}
-          height={isMobile ? 300 : 650}
+          animationData={heroAnimation}
+          loop={true}
+          autoplay={true}
+          style={{ width: isMobile ? 300 : 650, height: isMobile ? 300 : 650 }}
         />
       </div>
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>

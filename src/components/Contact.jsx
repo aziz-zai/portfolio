@@ -2,22 +2,12 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
-import Lottie from "react-lottie";
-import * as contact from "../assets/contact.json";
+import Lottie from "lottie-react";
+import contactAnimation from "../assets/contact.json";
 import { SectionWrapper } from "../hoc";
 import { styles } from "../styles";
 import { slideIn } from "../utils/motion";
 
-//template_7n8wa3p service_whtquzi -7_XcIjuL_PwX7u4R
-
-const defaultOptions1 = {
-  loop: true,
-  autoplay: true,
-  animationData: contact.default,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -29,9 +19,9 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     setForm({ ...form, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -51,7 +41,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I willl get back to you as soon as possible.");
+          alert("Thank you. I will get back to you as soon as possible.");
           setForm({
             name: "",
             email: "",
@@ -65,6 +55,7 @@ const Contact = () => {
         }
       );
   };
+
   return (
     <div className='xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden'>
       <motion.div
@@ -119,11 +110,13 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
+
       <motion.div
         variants={slideIn("right", "twing", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px] m-auto'
       >
-        <Lottie options={defaultOptions1} style={{ width: "100%", height: "100%" }} />
+        {/* Updated Lottie component */}
+        <Lottie animationData={contactAnimation} loop={true} autoplay={true} style={{ width: "100%", height: "100%" }} />
       </motion.div>
     </div>
   );
