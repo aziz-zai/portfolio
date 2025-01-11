@@ -8,15 +8,9 @@ export const Footer = () => {
         <div className='h-[130px] flex flex-col md:m-auto'>
           <h3 className='font-bold mb-1'>Links</h3>
           <ul className='flex flex-col'>
-            <a href='#about' spy={true}>
-              About
-            </a>
-            <a href='#work' spy={true}>
-              Work
-            </a>
-            <a href='#contact' spy={true}>
-              Contact
-            </a>
+            <a href='#about'>About</a>
+            <a href='#work'>Work</a>
+            <a href='#contact'>Contact</a>
           </ul>
         </div>
         <div className='h-[130px] flex flex-col md:m-auto'>

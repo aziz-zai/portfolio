@@ -3,20 +3,8 @@ import Contact from "./Contact";
 import Experience from "./Experience";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
+import Preloader from "./Preloader";
 import Tech from "./Tech";
 import Works from "./Works";
-import { BallCanvas, ComputersCanvas, EarthCanvas, StarsCanvas } from "./canvas";
 
-export {
-  About,
-  BallCanvas,
-  ComputersCanvas,
-  Contact,
-  EarthCanvas,
-  Experience,
-  Hero,
-  Navbar,
-  StarsCanvas,
-  Tech,
-  Works,
-};
+export { About, Contact, Experience, Hero, Navbar, Preloader, Tech, Works };

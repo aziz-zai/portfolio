@@ -11,12 +11,12 @@ import web from "./web.png";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import flask from "./tech/flask.png";
-import github from "./tech/github.jpg";
+import github from "./tech/github.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
 import mssql from "./tech/mssql.png";
-import mui from "./tech/mui.jpg";
-import mysql from "./tech/mysql.jpg";
+import mui from "./tech/mui.png";
+import mysql from "./tech/mysql.png";
 import python from "./tech/python.png";
 import reactjs from "./tech/reactjs.png";
 import tailwind from "./tech/tailwind.png";
@@ -31,13 +31,16 @@ import mercedes_logo from "./company/mercedes_logo.png";
 import tutor_logo from "./company/tutor_logo.png";
 
 import affstaetter from "./affstaetter.jpg";
+import contact from "./contact.svg";
 import elektro from "./elektro.jpg";
+import hero_img from "./hero_img.svg";
 import thrones from "./thrones.jpg";
 
 export {
   affstaetter,
   backend,
   close,
+  contact,
   creator,
   css,
   docker,
@@ -47,6 +50,7 @@ export {
   github,
   githubWhite,
   hdm_logo,
+  hero_img,
   html,
   javascript,
   link,
